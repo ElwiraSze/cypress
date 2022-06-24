@@ -1,9 +1,11 @@
 /// <reference types="Cypress" />
 
+import data from "../fixtures/example.json";
+
 describe("Simple tests", () => {
 
     beforeEach( () => {
-        cy.visit("https://www.medipment.pl/");
+        cy.visit(data.baseUrl);
         cy.url().should('contain', 'https://www.medipment.pl/');
     
     })
