@@ -1,1 +1,4 @@
-{}
+{
+    "baseUrl": "https://www.medipment.pl/",
+    "defaultCommandTimeout": 10000
+}

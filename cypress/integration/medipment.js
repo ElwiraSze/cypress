@@ -5,7 +5,7 @@ import data from "../fixtures/example.json";
 describe("Simple tests", () => {
 
     beforeEach( () => {
-        cy.visit(data.baseUrl);
+        cy.visit('/');
         cy.url().should('contain', 'https://www.medipment.pl/');
     
     })
@@ -48,7 +48,7 @@ describe("Simple tests", () => {
     })
     
         it("Search bar", () => {
-            cy.get('#searchPhrase_1').click().type("Blumed");
+            cy.get('#searchPhrase_1').click().type(data.firma);
             cy.get('#btnSearchOnPortal_1 > .fa').click();
             cy.get('.h2').should('contain','Wyniki wyszukiwania')
             cy.get(':nth-child(1) > :nth-child(2) > b > a').should('contain','Blumed')
